@@ -1,0 +1,36 @@
+{% block content %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1> hello everyone</h1>
+    
+    <tr>
+      
+      <td>{{ our_users.name}}</td>
+      <td>{{ our_users.Roll_Number}}</td>
+      <td> {{our_users.gender }}</td>
+      
+      
+      
+      <ul class="image-preview">
+        <li class="img"> <img src="file:///C:/Users/Ashina%20Gaur/Documents/building_user_login_system-master/demo/{{our_users.Roll_Number}}.png" alt="20200711_161557.jpg" /></li>
+        <li class="title">20200711_161557.jpg</li>
+    </ul>
+      
+      
+      
+      
+      
+      
+      <!-- <img src="http://static.t2ndesk.com/upload/management/05/05dfacce-c1b8-be3a-4ec8-a8433b75ea3c/Document/202109/e194b3f9-b525-a973-240e-4ebecb3a6e5d?dummy=472a536e2cf0e4ca912f0e0081774535" alt="20200711_161557.jpg" /> -->
+    </tr>
+  
+</body>
+
+{% endblock %}

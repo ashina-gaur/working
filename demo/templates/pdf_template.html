@@ -1,0 +1,27 @@
+{% block content %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form action="/pdf_template" method="POST" style="margin-top: 50px; margin-left:150px; margin-right:150px; ">
+        <input type="text" placeholder="Roll_No" name="Roll_No"> 
+        <input type="text" placeholder="Name" name="name">
+        <input type="text" placeholder="Gender" name="gender">
+       <input type="submit" value="Add name" >
+       
+       
+       
+       
+    </form>
+     
+    <td>{{ our_users.name}}</td>
+    <td>{{ our_users.Roll_Number}}</td>
+    <td> {{our_users.gender }}</td>
+</body>
+
+{% endblock %}

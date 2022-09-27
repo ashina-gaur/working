@@ -1,0 +1,49 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='styles.css')}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<body class="bg-nav">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Ruhoo Quiz App</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li><a href="{{ url_for('facesetup')}}">Add Profile Picture</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+    <h1 data-text=" Hello, {{name}}!" id="title" class="bg-nav"> Hello, {{name}}</h1>
+    <h1> hello again</h1>
+  {{our_users.Roll_Number}}
+  <img src="file:///C:/Users/Ashina%20Gaur/Documents/building_user_login_system-master/demo/{{our_users.Roll_Number}}.png" alt="ashina" />
+     <!-- <img  class="main-img" style=" height:400px; width:400px; margin-top: 70px; margin-left:560px"  src="{{our_users.Roll_Number}}.png" alt="bookshelf image"> -->
+    
+    </body>
+{% endblock %}
